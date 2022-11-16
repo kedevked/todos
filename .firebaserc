@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-playwright-test": {
+      "hosting": {
+        "todos": [
+          "login-playwright-test"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-playwright-test"
+  }
+}

@@ -1,27 +1,39 @@
 # Todos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+This project contains a small authenticated app using google login.
+Playwright is used to run e2e test
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Configure firebase
 
-## Code scaffolding
+- install firebase cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+       npm install -g firebase-tools
 
-## Build
+- create a firebase project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Create a firebase project [here](https://console.firebase.google.com/)
 
-## Running unit tests
+- reset the firebase config in the project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+      npx ng add @angular/fire
 
-## Running end-to-end tests
+Accept all the selections and select the project that was created in the previous step.
+A quick look in `app.module.ts` can help see if the schematic worked well.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### configure firebase authentication
 
-## Further help
+In firebase console, select google identity provider
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### install dependencies
+
+    npm ci
+
+## Run project
+
+    npm start
+
+## run playwright tests
+
+    npx playwright test
