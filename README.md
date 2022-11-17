@@ -34,6 +34,15 @@ In firebase console, select google identity provider
 
     npm start
 
-## run playwright tests
+## Playwright
+
+### Configure oauth credentials
+
+Please follow the instructions [here](https://docs.cypress.io/guides/end-to-end-testing/google-authentication) to get google credentials and create a file `.env` at the root of the project with the following:
+
+    CLIENT_ID="xxx"
+    CLIENT_SECRET="xxx"
+    REFRESH_TOKEN="xxx"
+### run playwright tests
 
     npx playwright test
